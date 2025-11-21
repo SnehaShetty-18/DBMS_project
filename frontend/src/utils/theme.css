@@ -1,0 +1,74 @@
+/* Theme variables */
+
+:root {
+  /* Primary colors */
+  --primary-color: #667eea;
+  --primary-color-dark: #5a6fd8;
+  --primary-color-light: #7e8ff0;
+  
+  /* Secondary colors */
+  --secondary-color: #764ba2;
+  --secondary-color-dark: #6a4390;
+  --secondary-color-light: #885cb0;
+  
+  /* Success colors */
+  --success-color: #27ae60;
+  --success-color-dark: #219653;
+  --success-color-light: #2ecc71;
+  
+  /* Danger colors */
+  --danger-color: #e74c3c;
+  --danger-color-dark: #c0392b;
+  --danger-color-light: #ff6b6b;
+  
+  /* Warning colors */
+  --warning-color: #f39c12;
+  --warning-color-dark: #d35400;
+  --warning-color-light: #f5b041;
+  
+  /* Info colors */
+  --info-color: #3498db;
+  --info-color-dark: #2980b9;
+  --info-color-light: #5dade2;
+  
+  /* Neutral colors */
+  --dark-color: #2c3e50;
+  --light-color: #f5f7fa;
+  --white-color: #ffffff;
+  --gray-color: #7f8c8d;
+  --gray-light: #ecf0f1;
+  --gray-dark: #34495e;
+  
+  /* Typography */
+  --font-family-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  --font-family-mono: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+  
+  /* Borders */
+  --border-radius-sm: 4px;
+  --border-radius-md: 6px;
+  --border-radius-lg: 8px;
+  --border-radius-xl: 12px;
+  --border-radius-circle: 50%;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}

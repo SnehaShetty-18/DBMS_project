@@ -1,0 +1,40 @@
+```mermaid
+graph TD
+    A[Frontend - React] -->|API Calls| B(Backend - Node.js/Express)
+    B --> C[(Database - MySQL)]
+    B --> D[Authentication - JWT]
+    B --> E[Models - Sequelize]
+    B --> F[Controllers - Business Logic]
+    B --> G[Routes - API Endpoints]
+    
+    F --> H[User Controller]
+    F --> I[Alumni Controller]
+    F --> J[Student Controller]
+    F --> K[Mentorship Controller]
+    F --> L[Internship Controller]
+    F --> M[Feedback Controller]
+    
+    G --> N[User Routes]
+    G --> O[Alumni Routes]
+    G --> P[Student Routes]
+    G --> Q[Mentorship Routes]
+    G --> R[Internship Routes]
+    G --> S[Feedback Routes]
+    
+    H --> T[User Model]
+    I --> U[Alumni Model]
+    J --> V[Student Model]
+    K --> W[Mentorship Model]
+    L --> X[Internship Model]
+    M --> Y[Feedback Model]
+    
+    T --> C
+    U --> C
+    V --> C
+    W --> C
+    X --> C
+    Y --> C
+    
+    W --> Z[Message Model]
+    Z --> C
+```
