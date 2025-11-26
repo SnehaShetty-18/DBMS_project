@@ -1,0 +1,202 @@
+/* ============================================================
+   🌟 2025 Premium Register Form UI — Soft White + Glass
+   ============================================================ */
+
+/* ---------- BASE ---------- */
+
+body {
+  background: #f5f8ff; /* soft white/blue */
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: #1e293b;
+}
+
+.form-master-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+/* ---------- MAIN CARD ---------- */
+
+.form-card {
+  width: 95%;
+  max-width: 850px;
+  background: rgba(255, 255, 255, 0.65);
+  padding: 45px;
+  border-radius: 22px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- TITLE ---------- */
+
+.form-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* ---------- ROLE SWITCH ---------- */
+
+.role-switch-box {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.role-switch-btn {
+  background: #ffffff;
+  border: 2px solid #3b82f6;
+  padding: 8px 18px;
+  border-radius: 14px;
+  font-weight: 600;
+  color: #2563eb;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.role-switch-btn:hover {
+  background: #3b82f6;
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(37, 99, 235, 0.4);
+}
+
+/* ---------- GRID LAYOUTS ---------- */
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* ---------- FORM GROUP ---------- */
+
+.form-group {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 16px 14px 12px;
+  font-size: 16px;
+  border-radius: 16px;
+  border: 1px solid #dbeafe;
+  background: #ffffffd9;
+  color: #1e293b;
+  transition: 0.25s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+.form-input:hover {
+  border-color: #60a5fa;
+}
+
+.form-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.25);
+  outline: none;
+}
+
+/* ---------- LABEL FLOAT EFFECT ---------- */
+
+.form-label {
+  position: absolute;
+  left: 16px;
+  top: 18px;
+  font-size: 15px;
+  color: #6b7280;
+  transition: 0.2s;
+  pointer-events: none;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  top: -10px;
+  left: 12px;
+  background: white;
+  padding: 0 6px;
+  font-size: 13px;
+  color: #2563eb;
+  border-radius: 5px;
+}
+
+/* ---------- CHECKBOX ---------- */
+
+.checkbox-label {
+  font-size: 16px;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ---------- BUTTON ---------- */
+
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 18px;
+  font-size: 18px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(56, 189, 248, 0.35);
+  transition: 0.25s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: #1d4ed8;
+  box-shadow: 0 10px 26px rgba(37, 99, 235, 0.35);
+}
+
+/* ---------- ALERT ---------- */
+
+.alert-danger {
+  background: #fee2e2;
+  border-left: 4px solid #ef4444;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  color: #991b1b;
+}
+
+/* ---------- TEXT ---------- */
+
+.text-center {
+  text-align: center;
+}
+
+.mt-3 {
+  margin-top: 18px;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}

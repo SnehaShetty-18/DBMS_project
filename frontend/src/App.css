@@ -7,10 +7,17 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: #f8fafc;
   color: #334155;
   line-height: 1.6;
   font-feature-settings: "cv05" on, "cv07" on, "cv08" on, "cv09" on;
+  /* Soft animated gradient background */
+  background:
+    radial-gradient(circle at 0% 0%, rgba(59, 130, 246, 0.18) 0, transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(124, 58, 237, 0.18) 0, transparent 55%),
+    linear-gradient(135deg, #eef2ff, #f9fafb);
+  background-attachment: fixed;
+  background-size: 140% 140%, 160% 160%, 100% 100%;
+  animation: background-pan 18s ease-in-out infinite alternate;
 }
 
 .App {
@@ -142,6 +149,8 @@ main {
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  /* Subtle entrance + floating animation for hero content */
+  animation: hero-intro 0.9s ease-out, hero-float 12s ease-in-out infinite alternate;
 }
 
 .hero-title {
@@ -1587,5 +1596,43 @@ main {
   
   .chat-input button {
     width: 100%;
+  }
+}
+
+/* ----------------------------------------------------------
+   Global background + hero animations
+   ---------------------------------------------------------- */
+@keyframes background-pan {
+  0% {
+    background-position: 0% 0%, 100% 100%, 0% 0%;
+  }
+  50% {
+    background-position: 20% 10%, 80% 90%, 50% 50%;
+  }
+  100% {
+    background-position: 0% 0%, 100% 100%, 100% 100%;
+  }
+}
+
+@keyframes hero-intro {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes hero-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

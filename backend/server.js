@@ -19,7 +19,7 @@ app.use(morgan('combined'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Test database connection with better error handling
+// Test database connection
 db.authenticate()
   .then(() => console.log('Database connected successfully.'))
   .catch(err => {
@@ -67,7 +67,7 @@ app.use('*', (req, res) => {
   res.status(404).json({ message: 'Route not found' });
 });
 
-// Start server with better error handling
+// Start server
 const server = app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 }).on('error', (err) => {

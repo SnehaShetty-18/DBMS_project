@@ -114,6 +114,41 @@ CREATE TABLE feedback (
     FOREIGN KEY (to_user_id) REFERENCES users(user_id) ON DELETE CASCADE,
     FOREIGN KEY (mentorship_request_id) REFERENCES mentorship_requests(request_id) ON DELETE SET NULL
 );
+--procedure
+CREATE PROCEDURE get_all_alumni()
+BEGIN
+    SELECT * FROM alumni;
+END $$
+DELIMITER ;
+
+-- Functions
+DELIMITER $$
+CREATE FUNCTION count_total_alumni()
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    DECLARE total INT;
+    SELECT COUNT(*) INTO total FROM alumni;
+    RETURN total;
+END $$
+DELIMITER ;
+-- trigger
+DELIMITER $$
+
+CREATE TRIGGER trg_after_user_insert
+AFTER INSERT ON users
+FOR EACH ROW
+BEGIN
+    IF NEW.role = 'student' THEN
+        INSERT INTO students (user_id, student_number)
+        VALUES (NEW.user_id, CONCAT('STU', NEW.user_id));
+    ELSEIF NEW.role = 'alumni' THEN
+        INSERT INTO alumni (user_id)
+        VALUES (NEW.user_id);
+    END IF;
+END $$
+
+DELIMITER ;
 
 -- Indexes for better performance
 CREATE INDEX idx_users_email ON users(email);

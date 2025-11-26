@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import userService from '../services/userService'
 import BackAndLogout from '../components/BackAndLogout'
+import "../utils/EditProfile.css";
 
 const EditProfile = () => {
   const { user, role } = useAuth()

@@ -4,6 +4,7 @@ import userService from '../services/userService';
 import mentorshipService from '../services/mentorshipService';
 import internshipService from '../services/internshipService';
 import AlumniCard from '../components/AlumniCard';
+import "../utils/UnifiedDashboard.css";
 
 const UnifiedDashboard = () => {
   const { user, role } = useAuth();
